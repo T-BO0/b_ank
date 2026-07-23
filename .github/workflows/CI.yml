@@ -39,8 +39,8 @@ jobs:
       run: |
         curl -L https://github.com/golang-migrate/migrate/releases/download/v4.19.1/migrate.linux-amd64.tar.gz | tar xvz
         test -e ~/user/bin/ && echo "Path exists" || echo "Path does NOT exist"
-        sudo mv migrate ~/user/local/bin/
         ls -la ~
+        sudo mv migrate ~/user/local/bin/
         which migrate
 
     - name: run migration
