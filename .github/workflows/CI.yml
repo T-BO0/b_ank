@@ -38,7 +38,7 @@ jobs:
     - name: setup migrate
       run: |
         curl -L https://github.com/golang-migrate/migrate/releases/download/v4.19.1/migrate.linux-amd64.tar.gz | tar xvz
-        mv migrate.linux-amd64 user/bin/migrate
+        sudo mv migrate user/bin/
 
     - name: run migration
       run: make migrate_up
